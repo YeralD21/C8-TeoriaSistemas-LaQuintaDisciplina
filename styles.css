@@ -1,0 +1,386 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navegación */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-title {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    margin: 5px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #34495e;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: block;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Contenido principal */
+main {
+    padding: 40px 0;
+}
+
+.chapter {
+    background: white;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+.chapter-title {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 30px;
+    margin: 0;
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.content-block {
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.content-block:last-child {
+    border-bottom: none;
+}
+
+.content-block h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.content-block p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Grid de disciplinas */
+.disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.discipline-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.discipline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.discipline-card h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.discipline-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.example {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 3px solid #667eea;
+    margin-top: 15px;
+}
+
+.example strong {
+    color: #667eea;
+}
+
+/* Citas y bloques destacados */
+blockquote {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.quote-highlight {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.quote-highlight blockquote {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-menu {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .nav-title {
+        font-size: 1.5rem;
+    }
+    
+    .chapter-title {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+    
+    .content-block {
+        padding: 20px;
+    }
+    
+    .disciplines-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .discipline-card {
+        padding: 20px;
+    }
+    
+    blockquote {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    
+    .quote-highlight blockquote {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .nav-link {
+        text-align: center;
+    }
+    
+    .chapter-title {
+        font-size: 1.5rem;
+    }
+    
+    .content-block h3 {
+        font-size: 1.5rem;
+    }
+    
+    .discipline-card h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chapter {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.discipline-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estados activos */
+.nav-link.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+/* Efectos hover adicionales */
+.content-block:hover {
+    background: rgba(102, 126, 234, 0.02);
+}
+
+/* Mejoras de accesibilidad */
+.nav-link:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Estilos para texto seleccionado */
+::selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: #2c3e50;
+}
+
+/* Estilos para listas en las tarjetas */
+.discipline-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.discipline-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+    position: relative;
+    padding-left: 20px;
+}
+
+.discipline-card ul li:before {
+    content: "•";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.discipline-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para listas en content-block */
+.content-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.content-block ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.content-block ul li:before {
+    content: "→";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.content-block ul li:last-child {
+    border-bottom: none;
+}
+
+.content-block ul li strong {
+    color: #2c3e50;
+    font-weight: 600;
+}

@@ -327,6 +327,38 @@ footer {
     .quote-highlight blockquote {
         font-size: 1.2rem;
     }
+    
+    /* Estilos responsivos para el resumen especial */
+    .special-focus {
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .special-focus h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .dark-section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .dark-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .dark-section ul li {
+        font-size: 0.9rem;
+        padding: 6px 0;
+        padding-left: 20px;
+    }
+    
+    .warning-box {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -464,4 +496,88 @@ html {
 .content-block ul li strong {
     color: #2c3e50;
     font-weight: 600;
+}
+
+/* Estilos especiales para el resumen con fondo negro */
+.special-focus {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+    border: 2px solid #667eea;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.special-focus h3 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-section {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #667eea;
+}
+
+.dark-section h4 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dark-section ul li {
+    color: #e0e0e0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+    position: relative;
+    padding-left: 25px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.dark-section ul li:before {
+    content: "▸";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+}
+
+.dark-section ul li:last-child {
+    border-bottom: none;
+}
+
+.dark-section ul li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.warning-box {
+    background: linear-gradient(135deg, #d32f2f, #f44336);
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #ffeb3b;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.warning-box strong {
+    color: #ffeb3b;
+    font-weight: 700;
 }
